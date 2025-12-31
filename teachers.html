@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teach With Us - Nexa Tutors | Become a Tutor</title>
+    <title>Why Us - Nexa Tutors | Join Our Team</title>
     <meta name="description" content="Join Nexa Tutors as an expert educator. Teach O/A Levels, Matric, University subjects. Flexible hours, competitive pay, professional development.">
     
     <!-- Tailwind CSS -->
@@ -37,7 +37,8 @@
                     <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
                     <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About Us</a>
                     <a href="subjects.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Subjects</a>
-                    <a href="teachers.html" class="nav-link text-blue-600 font-medium">Teach With Us</a>
+                    <a href="teachers.html" class="nav-link text-blue-600 font-medium">Why Us</a>
+                    <a href="register.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Register</a>
                     <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
                 </div>
                 
@@ -318,342 +319,46 @@
         </div>
     </section>
 
-    <!-- Application Form -->
-    <section class="py-16 bg-gray-50" id="application-form">
+    <!-- Redirect to Register Page -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Ready to Join Our Team?</h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Complete your tutor application on our dedicated registration page
+            </p>
+            <a href="register.html" class="inline-block bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-all transform hover:scale-105">
+                <i class="fas fa-arrow-right mr-2"></i> Go to Tutor Application
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Tutor Application Form</h2>
-                    <p class="text-gray-600 mb-8">
-                        Please complete all required fields. We'll contact you within 3-5 business days.
-                    </p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h3 class="text-lg font-bold mb-2">What qualifications do I need?</h3>
+                        <p class="text-gray-600">
+                            You should have expertise in your subject area with a bachelor's degree or higher. Teaching experience is preferred but not mandatory for fresh graduates with excellent academic records.
+                        </p>
+                    </div>
                     
-                    <form id="teacherApplicationForm" class="space-y-8">
-                        <!-- Personal Information -->
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Personal Information</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="form-label required">Full Name</label>
-                                    <input type="text" class="form-input" placeholder="Enter your full name" required>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label required">Email Address</label>
-                                    <input type="email" class="form-input" placeholder="your.email@example.com" required>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label required">Phone Number</label>
-                                    <input type="tel" class="form-input" placeholder="+92 300 1234567" required>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label required">CNIC Number</label>
-                                    <input type="text" class="form-input" placeholder="XXXXX-XXXXXXX-X" required>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label">Date of Birth</label>
-                                    <input type="date" class="form-input">
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label required">City of Residence</label>
-                                    <select class="form-input" required>
-                                        <option value="">Select City</option>
-                                        <option value="lahore">Lahore</option>
-                                        <option value="islamabad">Islamabad</option>
-                                        <option value="rawalpindi">Rawalpindi</option>
-                                        <option value="karachi">Karachi</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Educational Background -->
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Educational Background</h3>
-                            <div class="space-y-6">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label required">Highest Degree</label>
-                                        <select class="form-input" required>
-                                            <option value="">Select Degree</option>
-                                            <option value="bachelors">Bachelor's</option>
-                                            <option value="masters">Master's</option>
-                                            <option value="phd">PhD</option>
-                                            <option value="current-student">Current Student</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label required">Field of Study</label>
-                                        <input type="text" class="form-input" placeholder="e.g., Mathematics, Physics, Computer Science" required>
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label required">Institution Name</label>
-                                    <input type="text" class="form-input" placeholder="University/College name" required>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label">Graduation Year</label>
-                                        <input type="number" class="form-input" placeholder="YYYY" min="1950" max="2030">
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label">CGPA/Grade</label>
-                                        <input type="text" class="form-input" placeholder="e.g., 3.5/4.0, A, 85%">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teaching Information -->
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Teaching Information</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <label class="form-label required">Subjects You Can Teach</label>
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Mathematics</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Physics</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Chemistry</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Biology</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">English</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Computer Science</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Economics</span>
-                                        </label>
-                                        <label class="checkbox-label">
-                                            <input type="checkbox" class="hidden">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="text-gray-700">Accounting</span>
-                                        </label>
-                                    </div>
-                                    <input type="text" class="form-input" placeholder="Other subjects (comma separated)">
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label required">Teaching Experience</label>
-                                        <select class="form-input" required>
-                                            <option value="">Select experience</option>
-                                            <option value="0">No formal experience</option>
-                                            <option value="0-1">Less than 1 year</option>
-                                            <option value="1-3">1-3 years</option>
-                                            <option value="3-5">3-5 years</option>
-                                            <option value="5+">5+ years</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label required">Levels You Can Teach</label>
-                                        <select class="form-input" required>
-                                            <option value="">Select levels</option>
-                                            <option value="matric">Matric (9th-10th)</option>
-                                            <option value="o-levels">O Levels</option>
-                                            <option value="a-levels">A Levels</option>
-                                            <option value="university">University</option>
-                                            <option value="all">All Levels</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label required">Preferred Teaching Mode</label>
-                                        <select class="form-input" required>
-                                            <option value="">Select mode</option>
-                                            <option value="in-person">In-person only</option>
-                                            <option value="online">Online only</option>
-                                            <option value="both">Both in-person & online</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label required">Weekly Availability (hours)</label>
-                                        <select class="form-input" required>
-                                            <option value="">Select hours</option>
-                                            <option value="5-10">5-10 hours</option>
-                                            <option value="10-20">10-20 hours</option>
-                                            <option value="20-30">20-30 hours</option>
-                                            <option value="30+">30+ hours (full-time)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <div>
-                                        <label class="form-label">Preferred Time Slots</label>
-                                        <select class="form-input">
-                                            <option value="">Select slot</option>
-                                            <option value="morning">Morning (9AM-12PM)</option>
-                                            <option value="afternoon">Afternoon (12PM-4PM)</option>
-                                            <option value="evening">Evening (4PM-8PM)</option>
-                                            <option value="weekends">Weekends only</option>
-                                            <option value="flexible">Flexible</option>
-                                        </select>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label">Expected Hourly Rate (PKR)</label>
-                                        <input type="number" class="form-input" placeholder="e.g., 1000">
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label">Teaching Certifications</label>
-                                        <input type="text" class="form-input" placeholder="e.g., TEFL, Teaching License">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Additional Information -->
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Additional Information</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <label class="form-label">Why do you want to teach with Nexa Tutors?</label>
-                                    <textarea class="form-input" rows="4" placeholder="Tell us about your teaching philosophy and motivation..."></textarea>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label">Teaching Experience Details</label>
-                                    <textarea class="form-input" rows="4" placeholder="Describe your previous teaching/tutoring experience, if any..."></textarea>
-                                </div>
-                                
-                                <div>
-                                    <label class="form-label">Special Skills or Expertise</label>
-                                    <textarea class="form-input" rows="3" placeholder="Any special teaching methods, technology skills, or subject expertise..."></textarea>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label">References (Name & Contact)</label>
-                                        <textarea class="form-input" rows="3" placeholder="Name, relationship, phone/email..."></textarea>
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label">How did you hear about us?</label>
-                                        <select class="form-input">
-                                            <option value="">Select option</option>
-                                            <option value="website">Website</option>
-                                            <option value="social-media">Social Media</option>
-                                            <option value="friend">Friend/Colleague</option>
-                                            <option value="advertisement">Advertisement</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Resume Upload -->
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Document Upload</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <label class="form-label">
-                                        Resume/CV
-                                        <span class="tooltip ml-1 text-blue-600" data-tooltip="PDF or Word document, max 5MB">
-                                            <i class="fas fa-question-circle"></i>
-                                        </span>
-                                    </label>
-                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-                                        <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-4"></i>
-                                        <p class="text-gray-600 mb-2">Drag & drop your resume here or</p>
-                                        <label class="cursor-pointer">
-                                            <span class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                                                Browse Files
-                                            </span>
-                                            <input type="file" class="hidden" accept=".pdf,.doc,.docx">
-                                        </label>
-                                        <p class="text-sm text-gray-500 mt-4">PDF, DOC, DOCX (Max 5MB)</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="form-label">Degree/Transcript (Optional)</label>
-                                        <input type="file" class="form-input p-2">
-                                    </div>
-                                    
-                                    <div>
-                                        <label class="form-label">CNIC Copy (Optional)</label>
-                                        <input type="file" class="form-input p-2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Terms and Submit -->
-                        <div class="pt-6 border-t border-gray-200">
-                            <div class="mb-6">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" class="hidden" required>
-                                    <span class="checkbox-custom"></span>
-                                    <span class="text-gray-700">
-                                        I confirm that all information provided is accurate to the best of my knowledge.
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" class="hidden" required>
-                                    <span class="checkbox-custom"></span>
-                                    <span class="text-gray-700">
-                                        I agree to the terms and conditions and privacy policy of Nexa Tutors.
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <div class="flex flex-col sm:flex-row gap-4">
-                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors flex-1">
-                                    Submit Application
-                                </button>
-                                <button type="reset" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
-                                    Reset Form
-                                </button>
-                            </div>
-                            
-                            <p class="text-sm text-gray-500 mt-4 text-center">
-                                We'll contact you within 3-5 business days after reviewing your application.
-                            </p>
-                        </div>
-                    </form>
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h3 class="text-lg font-bold mb-2">How much can I earn?</h3>
+                        <p class="text-gray-600">
+                            Earnings depend on your qualifications, experience, and availability. We offer competitive rates ranging from PKR 1,000-3,000 per hour based on your profile and subject expertise.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h3 class="text-lg font-bold mb-2">What support do tutors receive?</h3>
+                        <p class="text-gray-600">
+                            We provide teaching materials, curriculum guidance, training workshops, administrative support for scheduling and payments, and a collaborative community of educators.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -743,7 +448,7 @@
                         <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
                         <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
                         <li><a href="subjects.html" class="text-gray-400 hover:text-white">All Subjects</a></li>
-                        <li><a href="teachers.html" class="text-gray-400 hover:text-white">Become a Tutor</a></li>
+                        <li><a href="teachers.html" class="text-gray-400 hover:text-white">Why Us</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
                     </ul>
                 </div>

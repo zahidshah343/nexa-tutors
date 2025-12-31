@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Nexa Tutors | Student & Tutor Registration</title>
+    <meta name="description" content="Register as a student/parent or apply as a tutor with Nexa Tutors. Choose your path to academic excellence.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Nexa Tutors</h1>
+                        <p class="text-xs text-gray-500">Excellence in Education</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                    <a href="subjects.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Subjects</a>
+                    <a href="teachers.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Why Us</a>
+                    <a href="register.html" class="nav-link text-blue-600 font-medium">Register</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="register.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors register-button-pulse">
+                        Register Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700">About Us</a>
+                <a href="subjects.html" class="block py-2 text-gray-700">Subjects</a>
+                <a href="teachers.html" class="block py-2 text-gray-700">Why Us</a>
+                <a href="register.html" class="block py-2 text-gray-700">Register</a>
+                <a href="contact.html" class="block py-2 text-gray-700">Contact</a>
+                <a href="register.html" class="block bg-blue-600 text-white font-medium py-2 px-4 rounded-lg text-center register-button-pulse">
+                    Register Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Registration</h1>
+                <p class="text-xl text-blue-100">
+                    Choose your path to academic excellence - Join us as a student or tutor
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Options Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                <!-- Student/Parent Card -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 border-2 border-blue-300 cursor-pointer transition-all hover:shadow-lg hover:scale-105" onclick="switchTab('student')">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Student / Parent Registration</h2>
+                    <p class="text-gray-700 mb-6">Register as a student or parent to get access to quality tutoring services. Choose your preferred subjects and schedule.</p>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors w-full register-button-pulse">
+                        Register as Student
+                    </button>
+                </div>
+
+                <!-- Tutor Card -->
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg p-8 border-2 border-amber-300 cursor-pointer transition-all hover:shadow-lg hover:scale-105" onclick="switchTab('tutor')">
+                    <div class="text-4xl text-amber-600 mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Tutor Application</h2>
+                    <p class="text-gray-700 mb-6">Apply as a tutor to join our team of expert educators. Share your qualifications and teaching experience with us.</p>
+                    <button class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-6 rounded-lg transition-colors w-full register-button-pulse">
+                        Apply as Tutor
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Forms Section -->
+    <section class="py-16 bg-gray-50" id="registration-forms">
+        <div class="container mx-auto px-4">
+            <!-- Student/Parent Registration Form -->
+            <div id="student-form" class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Student & Parent Registration Form</h2>
+                <p class="text-gray-600 mb-8">
+                    Complete this form to register your child or yourself for tutoring services.
+                </p>
+                
+                <form id="studentRegistrationForm" class="space-y-8">
+                    <!-- Student Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Student Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label required">Student Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter student's full name" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Age/Grade Level</label>
+                                <select class="form-input" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="8th">8th Grade</option>
+                                    <option value="9th">9th Grade (Matric Part 1)</option>
+                                    <option value="10th">10th Grade (Matric Part 2)</option>
+                                    <option value="O-Levels">O-Levels</option>
+                                    <option value="A-Levels">A-Levels/FSc</option>
+                                    <option value="university">University</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label required">Student Email (Optional)</label>
+                                <input type="email" class="form-input" placeholder="student@email.com">
+                            </div>
+
+                            <div>
+                                <label class="form-label required">Residential Area</label>
+                                <input type="text" class="form-input" placeholder="e.g., DHA Phase 6, Gulberg, Model Town" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Parent/Guardian Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Parent/Guardian Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label required">Parent/Guardian Name</label>
+                                <input type="text" class="form-input" placeholder="Enter parent/guardian name" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Relationship to Student</label>
+                                <select class="form-input" required>
+                                    <option value="">Select Relationship</option>
+                                    <option value="father">Father</option>
+                                    <option value="mother">Mother</option>
+                                    <option value="guardian">Guardian</option>
+                                    <option value="sibling">Sibling</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label required">Primary Contact Number</label>
+                                <input type="tel" class="form-input" placeholder="+92 XXX XXXXXXX" required>
+                                <span class="form-subtitle">We'll contact you on this number</span>
+                            </div>
+
+                            <div>
+                                <label class="form-label">Secondary Contact Number</label>
+                                <input type="tel" class="form-input" placeholder="Optional">
+                            </div>
+
+                            <div>
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferred Subjects -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Preferred Subjects</h3>
+                        <label class="form-label required">Select all subjects that apply</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Mathematics" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">Mathematics</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Physics" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">Physics</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Chemistry" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">Chemistry</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Biology" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">Biology</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="English" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">English</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="subjects" value="Computer" class="hidden">
+                                <span class="checkbox-custom"></span>
+                                <span class="text-gray-700">Computer Science</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Learning Preferences -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Learning Preferences</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label required">Preferred Tuition Type</label>
+                                <select class="form-input" required>
+                                    <option value="">Select Option</option>
+                                    <option value="home">Home Tuition</option>
+                                    <option value="center">At Our Center (Model Town)</option>
+                                    <option value="online">Online Sessions</option>
+                                    <option value="hybrid">Hybrid (Mix of Both)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="form-label required">Budget Range (Monthly)</label>
+                                <select class="form-input" required>
+                                    <option value="">Select Budget</option>
+                                    <option value="6k-8k">PKR 6,000 - 8,000</option>
+                                    <option value="8k-10k">PKR 8,000 - 10,000</option>
+                                    <option value="10k-12k">PKR 10,000 - 12,000</option>
+                                    <option value="12k+">PKR 12,000+</option>
+                                    <option value="flexible">Flexible (Based on quality)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Additional Information</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="form-label required">Academic Goals & Challenges</label>
+                                <textarea class="form-input" rows="4" placeholder="Please describe the student's current academic performance, specific challenges, and goals" required></textarea>
+                            </div>
+
+                            <div>
+                                <label class="form-label">How did you hear about us?</label>
+                                <select class="form-input">
+                                    <option value="">Select Option</option>
+                                    <option value="friend">Friend/Family Referral</option>
+                                    <option value="website">Website/Social Media</option>
+                                    <option value="flyer">Flyer/Advertisement</option>
+                                    <option value="search">Google Search</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors w-full text-lg">
+                        <i class="fas fa-paper-plane mr-2"></i> Submit Student Registration
+                    </button>
+                </form>
+            </div>
+
+            <!-- Tutor Registration Form -->
+            <div id="tutor-form" class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 hidden">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Tutor Application Form</h2>
+                <p class="text-gray-600 mb-8">
+                    Please complete all required fields. We'll contact you within 3-5 business days.
+                </p>
+                
+                <form id="teacherApplicationForm" class="space-y-8">
+                    <!-- Personal Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Personal Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="form-label required">Full Name</label>
+                                <input type="text" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Email Address</label>
+                                <input type="email" class="form-input" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Phone Number</label>
+                                <input type="tel" class="form-input" placeholder="+92 300 1234567" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">CNIC Number</label>
+                                <input type="text" class="form-input" placeholder="XXXXX-XXXXXXX-X" required>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-input">
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">City of Residence</label>
+                                <select class="form-input" required>
+                                    <option value="">Select City</option>
+                                    <option value="lahore">Lahore</option>
+                                    <option value="islamabad">Islamabad</option>
+                                    <option value="rawalpindi">Rawalpindi</option>
+                                    <option value="karachi">Karachi</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Educational Background -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Educational Background</h3>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label required">Highest Degree</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select Degree</option>
+                                        <option value="bachelors">Bachelor's</option>
+                                        <option value="masters">Master's</option>
+                                        <option value="phd">PhD</option>
+                                        <option value="current-student">Current Student</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label required">Field of Study</label>
+                                    <input type="text" class="form-input" placeholder="e.g., Mathematics, Physics, Computer Science" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label required">Institution Name</label>
+                                <input type="text" class="form-input" placeholder="University/College name" required>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">Graduation Year</label>
+                                    <input type="number" class="form-input" placeholder="YYYY" min="1950" max="2030">
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">CGPA/Grade</label>
+                                    <input type="text" class="form-input" placeholder="e.g., 3.5/4.0, A, 85%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Teaching Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Teaching Information</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="form-label required">Subjects You Can Teach</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Mathematics</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Physics</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Chemistry</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Biology</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">English</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Computer Science</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Economics</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" class="hidden">
+                                        <span class="checkbox-custom"></span>
+                                        <span class="text-gray-700">Accounting</span>
+                                    </label>
+                                </div>
+                                <input type="text" class="form-input" placeholder="Other subjects (comma separated)">
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label required">Teaching Experience</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select experience</option>
+                                        <option value="0">No formal experience</option>
+                                        <option value="0-1">Less than 1 year</option>
+                                        <option value="1-3">1-3 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="5+">5+ years</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label required">Levels You Can Teach</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select levels</option>
+                                        <option value="matric">Matric (9th-10th)</option>
+                                        <option value="o-levels">O Levels</option>
+                                        <option value="a-levels">A Levels</option>
+                                        <option value="university">University</option>
+                                        <option value="all">All Levels</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label required">Preferred Teaching Mode</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select mode</option>
+                                        <option value="in-person">In-person only</option>
+                                        <option value="online">Online only</option>
+                                        <option value="both">Both in-person & online</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label required">Weekly Availability (hours)</label>
+                                    <select class="form-input" required>
+                                        <option value="">Select hours</option>
+                                        <option value="5-10">5-10 hours</option>
+                                        <option value="10-20">10-20 hours</option>
+                                        <option value="20-30">20-30 hours</option>
+                                        <option value="30+">30+ hours (full-time)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <label class="form-label">Preferred Time Slots</label>
+                                    <select class="form-input">
+                                        <option value="">Select slot</option>
+                                        <option value="morning">Morning (9AM-12PM)</option>
+                                        <option value="afternoon">Afternoon (12PM-4PM)</option>
+                                        <option value="evening">Evening (4PM-8PM)</option>
+                                        <option value="weekends">Weekends only</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Expected Hourly Rate (PKR)</label>
+                                    <input type="number" class="form-input" placeholder="e.g., 1000">
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">Teaching Certifications</label>
+                                    <input type="text" class="form-input" placeholder="e.g., TEFL, Teaching License">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional Information -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 pb-2 border-b">Additional Information</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="form-label">Why do you want to teach with Nexa Tutors?</label>
+                                <textarea class="form-input" rows="4" placeholder="Tell us about your teaching philosophy and motivation..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label">Teaching Experience Details</label>
+                                <textarea class="form-input" rows="4" placeholder="Describe your previous teaching/tutoring experience, if any..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="form-label">Special Skills or Expertise</label>
+                                <textarea class="form-input" rows="3" placeholder="Any special teaching methods, technology skills, or subject expertise..."></textarea>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">References (Name & Contact)</label>
+                                    <textarea class="form-input" rows="3" placeholder="Name, relationship, phone/email..."></textarea>
+                                </div>
+                                
+                                <div>
+                                    <label class="form-label">How did you hear about us?</label>
+                                    <select class="form-input">
+                                        <option value="">Select option</option>
+                                        <option value="website">Website</option>
+                                        <option value="social-media">Social Media</option>
+                                        <option value="friend">Friend/Colleague</option>
+                                        <option value="advertisement">Advertisement</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-lg transition-colors w-full text-lg register-button-pulse">
+                        <i class="fas fa-chalkboard-teacher mr-2"></i> Submit Tutor Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923064330657?text=Hi%20Nexa%20Lahore%20Tutors,%20I%20visited%20your%20registration%20page%20and%20need%20information" 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // Form Tab Switching
+        function switchTab(tab) {
+            if (tab === 'student') {
+                document.getElementById('student-form').classList.remove('hidden');
+                document.getElementById('tutor-form').classList.add('hidden');
+            } else if (tab === 'tutor') {
+                document.getElementById('student-form').classList.add('hidden');
+                document.getElementById('tutor-form').classList.remove('hidden');
+            }
+            
+            // Smooth scroll to forms
+            setTimeout(() => {
+                document.getElementById('registration-forms').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+
+        // Form submission handling
+        document.getElementById('studentRegistrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your registration! We will contact you shortly to confirm your enrollment.');
+            this.reset();
+        });
+
+        document.getElementById('teacherApplicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your application! We will review it and contact you within 3-5 business days.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
