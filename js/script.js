@@ -211,4 +211,56 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Stats Counter Animation
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                element.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                // Add suffix based on the original content
+                if (target === 8) {
+                    element.textContent = target + '+';
+                } else if (target === 500) {
+                    element.textContent = target + '+';
+                } else if (target === 95) {
+                    element.textContent = target + '%';
+                } else if (target === 25) {
+                    element.textContent = target + '+';
+                } else {
+                    element.textContent = target;
+                }
+            }
+        };
+        
+        updateCounter();
+    }
+    
+    // Intersection Observer for stats animation
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach((stat, index) => {
+                    setTimeout(() => {
+                        animateCounter(stat);
+                    }, index * 100);
+                });
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    // Observe stats container
+    const statsContainer = document.querySelector('.grid.grid-cols-2.gap-6');
+    if (statsContainer) {
+        statsObserver.observe(statsContainer);
+    }
 });

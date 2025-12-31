@@ -407,3 +407,36 @@ register.html a[href="register.html"] {
         box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
     }
 }
+
+/* Stats Card Animations */
+.stat-card {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-number {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-number {
+    transform: scale(1.1);
+}
