@@ -198,38 +198,6 @@ h1, h2, h3, h4 {
     scroll-margin-top: 100px;
 }
 
-/* Timeline Styles (About Page) */
-.timeline-item {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 30px;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--primary-blue);
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: 20px;
-    width: 2px;
-    height: calc(100% + 10px);
-    background: #e5e7eb;
-}
-
-.timeline-item:last-child::after {
-    display: none;
-}
-
 /* Form Styles */
 .form-input {
     width: 100%;
