@@ -2,8 +2,46 @@
    Nexa Lahore Tutors - Main JavaScript
    ======================================== */
 
+// Create animated stars in hero section
+function createStars() {
+    const starsContainer = document.querySelector('.hero-stars-container');
+    if (!starsContainer) return;
+    
+    const numberOfStars = 80;
+    
+    for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        
+        // Make some stars gold
+        if (i % 6 === 0) {
+            star.classList.add('star-gold');
+        }
+        
+        // Random size between 4-7px
+        const size = Math.random() * 3 + 4;
+        star.style.width = size + 'px';
+        star.style.height = size + 'px';
+        
+        // Random position
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        
+        // Random animation delay
+        star.style.animationDelay = Math.random() * 3 + 's';
+        
+        // Random animation duration
+        star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        
+        starsContainer.appendChild(star);
+    }
+}
+
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize stars
+    createStars();
+    
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     
